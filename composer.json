@@ -1,0 +1,9 @@
+{
+    "name": "behavior_lab/resource_hub_page_handler-extension",
+    "type": "streams-addon",
+    "autoload": {
+        "psr-4": {
+            "BehaviorLab\\ResourceHubPageHandlerExtension\\": "src/"
+        }
+    }
+}
