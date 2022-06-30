@@ -48,25 +48,19 @@ $display_resource_filter_bar = $page->entry->display_resource_filter_categories 
         <!-- Inline styles -->
         <style type="text/css">
         /* Inline styles */
-        {{ inline_resource_content('theme::assets/generated/styles/global.min.css') }}
-        {{ inline_resource_content('theme::assets/generated/styles/components/global-topbar.min.css') }}
-        {{ inline_resource_content('theme::assets/generated/styles/resource-hub.min.css') }}
-        {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-banner.min.css') }}
+        {!! inline_resource_content('theme::assets/generated/styles/global.min.css') !!}
+        {!! inline_resource_content('theme::assets/generated/styles/components/global-topbar.min.css') !!}
+        {!! inline_resource_content('theme::assets/generated/styles/resource-hub.min.css') !!}
+        {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-banner.min.css') !!}
         @if($display_resource_filter_bar)
-        {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-filter-bar.min.css') }}
+        {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-filter-bar.min.css') !!}
         @endif
-        {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-filter-results.min.css') }}
+        {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-main-filter-results.min.css') !!}
 
         @if($page->resource_main_page_blocks)
         @foreach($page->resource_main_page_blocks->pluck('type')->unique() as $blockType)
         @if($blockType)
-
-
-        /*
-
-
-        {{'theme::assets/generated/styles/blocks/' . snake_to_kebab($blockType->slug->value)}}    */
-        {{ inline_resource_content('theme::assets/generated/styles/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') !!}
         @endif
         @endforeach
         @endif

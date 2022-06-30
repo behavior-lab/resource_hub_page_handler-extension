@@ -44,24 +44,24 @@
         <!-- Inline styles -->
         <style type="text/css">
         /* Inline styles */
-        {{ inline_resource_content('theme::assets/generated/styles/global.min.css') }}
-        {{ inline_resource_content('theme::assets/generated/styles/components/global-topbar.min.css') }}
-        {{ inline_resource_content('theme::assets/generated/styles/resource-hub.min.css') }}
+        {!! inline_resource_content('theme::assets/generated/styles/global.min.css') !!}
+        {!! inline_resource_content('theme::assets/generated/styles/components/global-topbar.min.css') !!}
+        {!! inline_resource_content('theme::assets/generated/styles/resource-hub.min.css') !!}
         @if($page->resource_banner_type->getValue() === 'contained-image')
-            {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-contained-image.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-contained-image.min.css') !!}
         @elseif($page->resource_banner_type->getValue() === 'media-on-color')
-            {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-media-on-color.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-media-on-color.min.css') !!}
         @elseif($page->resource_banner_type->getValue() === 'media-on-image')
-            {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-media-on-image.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-media-on-image.min.css') !!}
         @elseif($page->resource_banner_type->getValue() === 'graphical-image-on-color')
-            {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-graphical-image-on-color.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-graphical-image-on-color.min.css') !!}
         @elseif($page->resource_banner_type->getValue() === 'text-on-media')
-            {{ inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-text-on-media.min.css') }}
+            {!! inline_resource_content('theme::assets/generated/styles/components/resource-hub-entry-banner-text-on-media.min.css') !!}
         @endif
         @if($page->resource_blocks)
             @foreach($page->resource_blocks->pluck('type')->unique() as $blockType)
                 @if($blockType)
-                    {{ inline_resource_content('theme::assets/generated/styles/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') }}
+                    {!! inline_resource_content('theme::assets/generated/styles/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') !!}
                 @endif
             @endforeach
         @endif
@@ -295,12 +295,11 @@
 
         <!-- Inline scripts -->
         <script type="application/javascript">
-        {{ inline_resource_content('theme::assets/generated/scripts/components/global-topbar.min.js') }}
+        {!! inline_resource_content('theme::assets/generated/scripts/components/global-topbar.min.js') !!}
         @if($page->resource_blocks)
             @foreach($page->resource_blocks->pluck('type')->unique() as $blockType)
                 @if($blockType)
-        /* {{'theme::assets/generated/scripts/blocks/' . snake_to_kebab($blockType->slug->value)}} */
-        {{ inline_resource_content('theme::assets/generated/scripts/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') }}
+        {!! inline_resource_content('theme::assets/generated/scripts/blocks/' . snake_to_kebab($blockType->slug->value) . '.min.css') !!}
                 @endif
             @endforeach
         @endif
