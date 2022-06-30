@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Contract;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page\Contract;
 
 use Anomaly\Streams\Platform\Entry\Contract\EntryRepositoryInterface;
 

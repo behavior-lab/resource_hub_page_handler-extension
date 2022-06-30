@@ -1,6 +1,6 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page;
 
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Contract\PageRepositoryInterface;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Contract\PageRepositoryInterface;
 use Anomaly\Streams\Platform\Entry\EntryRepository;
 
 class PageRepository extends EntryRepository implements PageRepositoryInterface

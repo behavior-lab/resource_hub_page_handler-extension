@@ -1,11 +1,11 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Contract\PageRepositoryInterface;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Form\PageEntryFormSections;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\PageRepository;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Contract\PageRepositoryInterface;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Form\PageEntryFormSections;
+use ConductLab\ResourceHubPageHandlerExtension\Page\PageRepository;
 use Anomaly\Streams\Platform\Model\ResourceHubPageHandler\ResourceHubPageHandlerPagesEntryModel;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\PageModel;
+use ConductLab\ResourceHubPageHandlerExtension\Page\PageModel;
 use Illuminate\Routing\Router;
 
 class ResourceHubPageHandlerExtensionServiceProvider extends AddonServiceProvider
@@ -53,7 +53,7 @@ class ResourceHubPageHandlerExtensionServiceProvider extends AddonServiceProvide
      * @type array|null
      */
     protected $middleware = [
-        //BehaviorLab\StructDataArticleExtension\Http\Middleware\ExampleMiddleware::class
+        //ConductLab\StructDataArticleExtension\Http\Middleware\ExampleMiddleware::class
     ];
 
     /**
@@ -63,7 +63,7 @@ class ResourceHubPageHandlerExtensionServiceProvider extends AddonServiceProvide
      */
     protected $groupMiddleware = [
         //'web' => [
-        //    BehaviorLab\StructDataArticleExtension\Http\Middleware\ExampleMiddleware::class,
+        //    ConductLab\StructDataArticleExtension\Http\Middleware\ExampleMiddleware::class,
         //],
     ];
 

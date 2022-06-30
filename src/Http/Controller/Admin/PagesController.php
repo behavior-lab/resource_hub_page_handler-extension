@@ -1,7 +1,7 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Http\Controller\Admin;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Http\Controller\Admin;
 
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Form\PageFormBuilder;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Table\PageTableBuilder;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Form\PageFormBuilder;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Table\PageTableBuilder;
 use Anomaly\Streams\Platform\Http\Controller\AdminController;
 
 class PagesController extends AdminController

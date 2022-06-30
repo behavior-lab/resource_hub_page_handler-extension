@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

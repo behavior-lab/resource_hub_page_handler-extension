@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension;
 
 use Anomaly\DefaultPageHandlerExtension\Command\MakePage;
 use Anomaly\PagesModule\Page\Contract\PageInterface;
@@ -44,9 +44,9 @@ class ResourceHubPageHandlerExtension extends PageHandlerExtension
     {
         $translations = $page->getTranslations();
         $settings = app(SettingRepositoryInterface::class);
-        $subSiteMainPage = $settings->value('behavior_lab.extension.resource_hub_page_handler::sub_site_main_page') ?: '';
-        $subSiteDomain = $settings->value('behavior_lab.extension.resource_hub_page_handler::sub_site_domain') ?: '';
-        $subSitePath = $settings->value('behavior_lab.extension.resource_hub_page_handler::sub_site_path') ?: '';
+        $subSiteMainPage = $settings->value('conduct_lab.extension.resource_hub_page_handler::sub_site_main_page') ?: '';
+        $subSiteDomain = $settings->value('conduct_lab.extension.resource_hub_page_handler::sub_site_domain') ?: '';
+        $subSitePath = $settings->value('conduct_lab.extension.resource_hub_page_handler::sub_site_path') ?: '';
 
 //        if ($page->getId() === 4) {
 //            dd($translations);

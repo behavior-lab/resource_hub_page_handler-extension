@@ -1,6 +1,6 @@
 <?php
 
-namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Support;
+namespace ConductLab\ResourceHubPageHandlerExtension\Page\Support;
 
 use Anomaly\SelectFieldType\SelectFieldType;
 use Illuminate\Support\Str;

@@ -1,10 +1,10 @@
 <?php
 
-namespace BehaviorLab\ResourceHubPageHandlerExtension;
+namespace ConductLab\ResourceHubPageHandlerExtension;
 
 use Anomaly\Streams\Platform\Database\Seeder\Seeder;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\PageSeederMain;
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\PageSeederEntry;
+use ConductLab\ResourceHubPageHandlerExtension\Page\PageSeederMain;
+use ConductLab\ResourceHubPageHandlerExtension\Page\PageSeederEntry;
 
 class ResourceHubPageHandlerExtensionSeeder extends Seeder
 {

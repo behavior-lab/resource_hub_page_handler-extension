@@ -1,6 +1,6 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page;
 
-use BehaviorLab\ResourceHubPageHandlerExtension\Page\Contract\PageInterface;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Contract\PageInterface;
 use Anomaly\Streams\Platform\Model\ResourceHubPageHandler\ResourceHubPageHandlerPagesEntryModel;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 

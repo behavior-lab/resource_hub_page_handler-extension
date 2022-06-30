@@ -5,7 +5,7 @@ return [
         'type'   => 'anomaly.field_type.select',
         'config' => [
             'default_value' => '/resource_hub',
-            'handler'       => 'BehaviorLab\ResourceHubPageHandlerExtension\Support\PageSlugOptions@handle',
+            'handler'       => 'ConductLab\ResourceHubPageHandlerExtension\Support\PageSlugOptions@handle',
         ],
     ],
     'sub_site_domain' => [

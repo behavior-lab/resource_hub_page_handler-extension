@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Form;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page\Form;
 
 use Anomaly\PagesModule\Page\Form\PageEntryFormBuilder;
 use Anomaly\PagesModule\Page\PageModel;
@@ -59,7 +59,7 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                                 },
                             ],
                             'banner' => [
-                                'title' => 'behavior_lab.extension.resource_hub_page_handler::tab.banner',
+                                'title' => 'conduct_lab.extension.resource_hub_page_handler::tab.banner',
 //                            'fields' => function (PageEntryFormBuilder $builder) {
 //                                return array_map(
 //                                    function (FieldType $field) {

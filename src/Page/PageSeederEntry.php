@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page;
 
 use Anomaly\PagesModule\Type\Contract\TypeRepositoryInterface;
 use Anomaly\Streams\Platform\Database\Seeder\Seeder;
@@ -8,8 +8,8 @@ class PageSeederEntry extends Seeder
     /**
      * Class PageSeeder
      *
-     * @link   https://behaviorlab.site/
-     * @author Behavior CPH, ApS <support@behaviorlab.site>
+     * @link   https://ConductLab.site/
+     * @author Behavior CPH, ApS <support@ConductLab.site>
      * @author Claus Hjort Bube <chb@b-cph.com>
      */
 
@@ -28,8 +28,8 @@ class PageSeederEntry extends Seeder
                         'name' => 'Resource Hub Entry',
                         'description' => 'A entry page type for the Resource Hub.',
                     ],
-                    'handler' => 'behavior_lab.extension.resource_hub_page_handler',
-                    'theme_layout' => 'behavior_lab.extension.resource_hub_page_handler::layouts.resource-hub-entry-page',
+                    'handler' => 'conduct_lab.extension.resource_hub_page_handler',
+                    'theme_layout' => 'conduct_lab.extension.resource_hub_page_handler::layouts.resource-hub-entry-page',
                     'layout' => '<h1>{{ page.title }}</h1>',
                 ]
             );
@@ -42,15 +42,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_category',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.instructions',
                     ],
                     'type' => 'anomaly.field_type.relationship',
                     'config' => [
                         'mode' => 'dropdown',
-                        'related' => \BehaviorLab\ResourceHubModule\Category\CategoryModel::class
+                        'related' => \ConductLab\ResourceHubModule\Category\CategoryModel::class
                     ],
                     'locked' => '1',
                 ]
@@ -73,15 +73,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_category',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_category.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_category.instructions',
                     ],
                     'type' => 'anomaly.field_type.relationship',
                     'config' => [
                         'mode' => 'dropdown',
-                        'related' => \BehaviorLab\ResourceHubModule\Category\CategoryModel::class
+                        'related' => \ConductLab\ResourceHubModule\Category\CategoryModel::class
                     ],
                     'locked' => '1',
                 ]
@@ -104,15 +104,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_topics',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_topics.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_topics.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_topics.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_topics.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_topics.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_topics.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_topics.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_topics.instructions',
                     ],
                     'type' => 'anomaly.field_type.multiple',
                     'config' => [
                         'mode' => 'tags',
-                        'related' => \BehaviorLab\ResourceHubModule\Topic\TopicModel::class
+                        'related' => \ConductLab\ResourceHubModule\Topic\TopicModel::class
                     ],
                     'locked' => '1',
                 ]
@@ -135,10 +135,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_headline',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_headline.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_headline.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_headline.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_headline.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_headline.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_headline.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_headline.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_headline.instructions',
                     ],
                     'type' => 'anomaly.field_type.text',
                     'config' => [],
@@ -163,10 +163,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_lead_paragraph',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_lead_paragraph.instructions',
                     ],
                     'type' => 'anomaly.field_type.textarea',
                     'config' => [
@@ -193,15 +193,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_type',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_type.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_type.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_type.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_type.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_type.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_type.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_type.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_type.instructions',
                     ],
                     'type' => 'anomaly.field_type.select',
                     'config' => [
                         'mode' => 'radio',
-                        "handler" => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\BannerSelectOptions::class
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\BannerSelectOptions::class
                     ],
                     'locked' => '1',
                 ]
@@ -224,15 +224,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_theme',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_theme.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_theme.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_theme.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_theme.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_theme.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_theme.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_theme.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_theme.instructions',
                     ],
                     'type' => 'anomaly.field_type.select',
                     'config' => [
                         'mode' => 'radio',
-                        "handler" => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\BannerThemeSelectOptions::class
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\BannerThemeSelectOptions::class
                     ],
                     'locked' => '1',
                 ]
@@ -255,15 +255,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_author',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_author.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_author.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_author.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_author.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_author.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_author.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_author.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_author.instructions',
                     ],
                     'type' => 'anomaly.field_type.multiple',
                     'config' => [
                         'mode' => 'lookup',
-                        'related' => \BehaviorLab\AuthorsModule\Author\AuthorModel::class,
+                        'related' => \ConductLab\AuthorsModule\Author\AuthorModel::class,
                     ],
                     'locked' => '1',
                 ]
@@ -286,10 +286,10 @@ class PageSeederEntry extends Seeder
 //                    'namespace' => 'pages',
 //                    'slug' => 'resource_published',
 //                    'en' => [
-//                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_published.name',
-//                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_published.placeholder',
-//                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_published.warning',
-//                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_published.instructions',
+//                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_published.name',
+//                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_published.placeholder',
+//                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_published.warning',
+//                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_published.instructions',
 //                    ],
 //                    'type' => 'anomaly.field_type.boolean',
 //                    "config" => [
@@ -316,10 +316,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_hidden',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_hidden.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_hidden.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_hidden.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_hidden.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_hidden.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_hidden.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_hidden.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_hidden.instructions',
                     ],
                     'type' => 'anomaly.field_type.boolean',
                     "config" => [
@@ -346,10 +346,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_protected',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_protected.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_protected.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_protected.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_protected.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_protected.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_protected.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_protected.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_protected.instructions',
                     ],
                     'type' => 'anomaly.field_type.boolean',
                     "config" => [
@@ -376,10 +376,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_image',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_image.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_image.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_image.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_image.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_image.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_image.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_image.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_image.instructions',
                     ],
                     'type' => 'anomaly.field_type.file',
                     'config' => [
@@ -406,10 +406,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_media',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_media.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_media.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_media.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_media.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_media.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_media.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_media.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_media.instructions',
                     ],
                     'type' => 'anomaly.field_type.file',
                     'config' => [
@@ -436,10 +436,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_file',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_file.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_file.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_file.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_file.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_file.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_file.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_file.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_file.instructions',
                     ],
                     'type' => 'anomaly.field_type.file',
                     'config' => [],
@@ -464,10 +464,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_url',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_url.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_url.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_url.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_url.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.instructions',
                     ],
                     'type' => 'anomaly.field_type.text',
                     'config' => [],
@@ -492,10 +492,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_bg_greyscale',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_greyscale.instructions',
                     ],
                     'type' => 'anomaly.field_type.boolean',
                     "config" => [
@@ -522,10 +522,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_bg_opacity',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_opacity.instructions',
                     ],
                     'type' => 'anomaly.field_type.integer',
                     "config" => [
@@ -555,15 +555,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_bg_blend_mode',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_bg_blend_mode.instructions',
                     ],
                     'type' => 'anomaly.field_type.select',
                     'config' => [
                         'mode' => 'dropdown',
-                        "handler" => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\BlendModeSelectOptions::class
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\BlendModeSelectOptions::class
                     ],
                     'locked' => '1',
                 ]
@@ -586,15 +586,15 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_banner_text_class',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_banner_text_class.instructions',
                     ],
                     'type' => 'anomaly.field_type.select',
                     'config' => [
                         'mode' => 'dropdown',
-                        "handler" => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\TextColorClassSelectOptions::class
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\TextColorClassSelectOptions::class
                     ],
                     'locked' => '1',
                 ]
@@ -617,10 +617,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'resource_blocks',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_blocks.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_blocks.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_blocks.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_blocks.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_blocks.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_blocks.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_blocks.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_blocks.instructions',
                     ],
                     'type' => 'anomaly.field_type.blocks',
                     'config' => [],
@@ -645,10 +645,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'autogenerate_related_resources',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related.instructions',
                     ],
                     'type' => 'anomaly.field_type.boolean',
                     "config" => [
@@ -675,10 +675,10 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'autogenerate_related_resources_max',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_autogenerate_related_max.instructions',
                     ],
                     'type' => 'anomaly.field_type.integer',
                     'config' => [
@@ -705,18 +705,18 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'pages',
                     'slug' => 'related_resources',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_related.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_related.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_related.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource_related.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_related.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_related.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_related.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_related.instructions',
                     ],
                     'type' => 'anomaly.field_type.multiple',
                     'config' => [
                         'mode' => 'lookup',
                         'related' => \Anomaly\PagesModule\Page\PageModel::class,
-                        'value_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\ValueTableBuilder::class,
-                        'selected_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\SelectedTableBuilder::class,
-                        'lookup_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\LookupTableBuilder::class,
+                        'value_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\ValueTableBuilder::class,
+                        'selected_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\SelectedTableBuilder::class,
+                        'lookup_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\MultipleFieldType\LookupTableBuilder::class,
                     ],
                     'locked' => '1',
                 ]
@@ -740,18 +740,18 @@ class PageSeederEntry extends Seeder
                     'namespace' => 'blocks',
                     'slug' => 'resource',
                     'en' => [
-                        'name' => 'behavior_lab.extension.resource_hub_page_handler::field.resource.name',
-                        'placeholder' => 'behavior_lab.extension.resource_hub_page_handler::field.resource.placeholder',
-                        'warning' => 'behavior_lab.extension.resource_hub_page_handler::field.resource.warning',
-                        'instructions' => 'behavior_lab.extension.resource_hub_page_handler::field.resource.instructions',
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource.instructions',
                     ],
                     'type' => 'anomaly.field_type.relationship',
                     'config' => [
                         'mode' => 'lookup',
                         'related' => '\Anomaly\PagesModule\Page\PageModel',
-                        'value_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\ValueTableBuilder::class,
-                        'selected_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\SelectedTableBuilder::class,
-                        'lookup_table' => \BehaviorLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\LookupTableBuilder::class,
+                        'value_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\ValueTableBuilder::class,
+                        'selected_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\SelectedTableBuilder::class,
+                        'lookup_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\LookupTableBuilder::class,
                     ],
                     'locked' => '1',
                 ]

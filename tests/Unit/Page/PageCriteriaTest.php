@@ -1,6 +1,6 @@
 <?php
 
-namespace BehaviorLab\ResourceHubPageHandlerExtension\Test\Unit\Page;
+namespace ConductLab\ResourceHubPageHandlerExtension\Test\Unit\Page;
 
 class PageCriteriaTest extends \TestCase
 {

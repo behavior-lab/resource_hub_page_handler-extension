@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Support;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page\Support;
 
 class LookupTableButtons
 {

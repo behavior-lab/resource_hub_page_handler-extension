@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Table;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page\Table;
 
 use Anomaly\Streams\Platform\Ui\Table\TableBuilder;
 

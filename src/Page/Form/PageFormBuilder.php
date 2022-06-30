@@ -1,4 +1,4 @@
-<?php namespace BehaviorLab\ResourceHubPageHandlerExtension\Page\Form;
+<?php namespace ConductLab\ResourceHubPageHandlerExtension\Page\Form;
 
 use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
 

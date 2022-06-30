@@ -1,6 +1,6 @@
 <?php
 
-namespace BehaviorLab\ResourceHubPageHandlerExtension\Support;
+namespace ConductLab\ResourceHubPageHandlerExtension\Support;
 
 use Anomaly\PagesModule\Page\PageModel;
 use Anomaly\SelectFieldType\SelectFieldType;
