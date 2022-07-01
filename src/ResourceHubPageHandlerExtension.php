@@ -63,14 +63,9 @@ class ResourceHubPageHandlerExtension extends PageHandlerExtension
                  * @var PageInterface|PagesPagesEntryTranslationsModel $translation
                  */
                     function ($translation) use ($page, $subSiteMainPage, $subSiteDomain, $subSitePath) {
-
-//                        if ($page->getId() === 4 && $translation->locale == 'zh-cn') {
-//                            dd($translation, $page->translate());
-//                        }
-                        $path = $translation->path;
-                        if ($translation->getSlug()) {
-                            $path = $page->translateOrDefault()->path;
-                        }
+                        $settings = app(SettingRepositoryInterface::class);
+                        $defaultLocale = $settings->value('streams::default_locale');
+                        $path = $page->translate($translation->locale)->slug ? $page->translate($translation->locale)->path : $page->translate($defaultLocale)->path;
                         $path = Str::replaceFirst($subSiteMainPage, '', $path);
                         $route = "
     Route::any('{$path}', [
