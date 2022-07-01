@@ -30,7 +30,7 @@ class PageSeederMain extends Seeder
                         'description' => 'The main page type for the Resource Hub.',
                     ],
                     'handler' => 'conduct_lab.extension.resource_hub_page_handler',
-                    'theme_layout' => 'conduct_lab.extension.resource_hub_page_handler::layouts.resource-hub-main-page',
+                    'theme_layout' => 'theme::layouts.resource-hub-main-page',
                     'layout' => '<h1>{{ page.title }}</h1>',
                 ]
             );

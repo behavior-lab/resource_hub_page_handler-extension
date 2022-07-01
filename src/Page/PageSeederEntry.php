@@ -29,7 +29,7 @@ class PageSeederEntry extends Seeder
                         'description' => 'A entry page type for the Resource Hub.',
                     ],
                     'handler' => 'conduct_lab.extension.resource_hub_page_handler',
-                    'theme_layout' => 'conduct_lab.extension.resource_hub_page_handler::layouts.resource-hub-entry-page',
+                    'theme_layout' => 'theme::layouts.resource-hub-entry-page',
                     'layout' => '<h1>{{ page.title }}</h1>',
                 ]
             );
