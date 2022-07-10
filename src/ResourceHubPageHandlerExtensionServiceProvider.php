@@ -1,6 +1,8 @@
 <?php namespace ConductLab\ResourceHubPageHandlerExtension;
 
+use Anomaly\PagesModule\Page\Event\PageIsSaving;
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Listener\TouchModifiedAt;
 use ConductLab\ResourceHubPageHandlerExtension\Page\Contract\PageRepositoryInterface;
 use ConductLab\ResourceHubPageHandlerExtension\Page\Form\PageEntryFormSections;
 use ConductLab\ResourceHubPageHandlerExtension\Page\PageRepository;
@@ -80,6 +82,9 @@ class ResourceHubPageHandlerExtensionServiceProvider extends AddonServiceProvide
      * @type array|null
      */
     protected $listeners = [
+        PageIsSaving::class => [
+            TouchModifiedAt::class
+        ]
     ];
 
     /**
