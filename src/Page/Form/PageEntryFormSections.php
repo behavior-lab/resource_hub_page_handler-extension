@@ -23,7 +23,7 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
     {
 //        dd($builder);
         if ($builder->getForms()['page']->getType()?->getSlug() === 'resource_hub_entry' ||
-            $builder->getEntry()->getType()?->getSlug() === 'resource_hub_entry') {
+            $builder->getEntry()?->getType()?->getSlug() === 'resource_hub_entry') {
 
             $fieldsForContentSection = array_map(
                 function (FieldType $field) {
