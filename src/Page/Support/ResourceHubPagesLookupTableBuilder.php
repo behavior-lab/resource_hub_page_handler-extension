@@ -86,7 +86,7 @@ class ResourceHubPagesLookupTableBuilder extends LookupTableBuilder
      *
      * @var string
      */
-    protected $buttons = LookupTableButtons::class;
+//    protected $buttons = LookupTableButtons::class;
 
     /**
      * The table options.

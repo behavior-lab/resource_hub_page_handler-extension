@@ -8,5 +8,5 @@ return [
     ],
     'sub_site_path' => [
         'name' => 'Sub site path'
-    ]
+    ],
 ];

@@ -25,6 +25,12 @@ return [
         'warning' => '',
         'instructions' => '',
     ],
+    'resource_keywords' => [
+        'name' => 'Keywords',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => 'The keywords aren\'t displayed but are used in search and to find related resources',
+    ],
     'resource_banner_headline' => [
         'name' => 'Headline',
         'placeholder' => '',
@@ -152,6 +158,18 @@ return [
     ],
     'resource_blocks' => [
         'name' => 'Blocks',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => '',
+    ],
+    'resource_share_position' => [
+        'name' => 'Position of share options',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => '',
+    ],
+    'resource_publication_info_position' => [
+        'name' => 'Position of publication information',
         'placeholder' => '',
         'warning' => '',
         'instructions' => '',

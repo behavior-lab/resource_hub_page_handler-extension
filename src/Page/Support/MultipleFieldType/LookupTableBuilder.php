@@ -8,6 +8,7 @@ use Anomaly\PagesModule\Page\PageModel;
 use Anomaly\PagesModule\Type\TypeRepository;
 use Anomaly\Streams\Platform\Support\Collection;
 use Anomaly\Streams\Platform\Ui\Table\TableBuilder;
+use ConductLab\ResourceHubPageHandlerExtension\Page\Support\LookupTableButtons;
 use Illuminate\Database\Eloquent\Builder;
 
 class LookupTableBuilder extends \Anomaly\MultipleFieldType\Table\LookupTableBuilder
@@ -85,7 +86,7 @@ class LookupTableBuilder extends \Anomaly\MultipleFieldType\Table\LookupTableBui
      *
      * @var string
      */
-    protected $buttons = LookupTableButtons::class;
+//    protected $buttons = LookupTableButtons::class;
 
     /**
      * The table options.

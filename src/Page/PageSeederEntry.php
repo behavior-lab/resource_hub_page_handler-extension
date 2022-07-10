@@ -8,8 +8,8 @@ class PageSeederEntry extends Seeder
     /**
      * Class PageSeeder
      *
-     * @link   https://ConductLab.site/
-     * @author Behavior CPH, ApS <support@ConductLab.site>
+     * @link   https://behaviorlab.io/
+     * @author Behavior CPH, ApS <support@behaviorlab.io>
      * @author Claus Hjort Bube <chb@b-cph.com>
      */
 
@@ -122,6 +122,33 @@ class PageSeederEntry extends Seeder
             $this->assignments->create(
                 [
                     'translatable' => false,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_keywords', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_keywords',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_keywords.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_keywords.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_keywords.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_keywords.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.tags',
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => true,
                     'required' => false,
                     'stream' => $pageTypeStream,
                     'field' => $pageTypeField,
@@ -754,6 +781,70 @@ class PageSeederEntry extends Seeder
                         'lookup_table' => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\RelationshipFieldType\LookupTableBuilder::class,
                     ],
                     'locked' => '1',
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_share_position', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_share_position',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.select',
+                    'config' => [
+                        'mode' => 'dropdown',
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\SharePositionOptions::class,
+                        'default_value' => 'default'
+                    ],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => false,
+                    'required' => true,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_publication_info_position', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_publication_info_position',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_share_position.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.select',
+                    'config' => [
+                        'mode' => 'dropdown',
+                        "handler" => \ConductLab\ResourceHubPageHandlerExtension\Page\Support\SharePublicationInfoOptions::class,
+                        'default_value' => 'default'
+                    ],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => false,
+                    'required' => true,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
                 ]
             );
         }

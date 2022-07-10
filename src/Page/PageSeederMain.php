@@ -9,8 +9,8 @@ class PageSeederMain extends Seeder
     /**
      * Class PageSeeder
      *
-     * @link   https://ConductLab.site/
-     * @author Behavior CPH, ApS <support@ConductLab.site>
+     * @link   https://behaviorlab.io/
+     * @author Behavior CPH, ApS <support@behaviorlab.io>
      * @author Claus Hjort Bube <chb@b-cph.com>
      */
 
@@ -615,26 +615,26 @@ class PageSeederMain extends Seeder
         }
 
 
-        $type = $pageType;
-
-        $pages = app(PageRepositoryInterface::class);
-
-        $pages->create(
-            [
-                'en'           => [
-                    'title' => 'Resource Hub',
-                ],
-                'slug'         => 'resource-hub',
-                'entry'        => $type->getEntryModel()->create(
-                    [
-                        'en' => [
-                            'resource_main_headline' => 'Welcome to the Resource Hub',
-                        ],
-                    ]
-                ),
-                'type'         => $type,
-                'enabled'      => true,
-            ]
-        )->allowedRoles()->sync([]);
+//        $type = $pageType;
+//
+//        $pages = app(PageRepositoryInterface::class);
+//
+//        $pages->create(
+//            [
+//                'en'           => [
+//                    'title' => 'Resource Hub',
+//                ],
+//                'slug'         => 'resource-hub',
+//                'entry'        => $type->getEntryModel()->create(
+//                    [
+//                        'en' => [
+//                            'resource_main_headline' => 'Welcome to the Resource Hub',
+//                        ],
+//                    ]
+//                ),
+//                'type'         => $type,
+//                'enabled'      => true,
+//            ]
+//        )->allowedRoles()->sync([]);
     }
 }

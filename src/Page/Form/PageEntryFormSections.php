@@ -24,39 +24,48 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
 //        dd($builder);
         if ($builder->getForms()['page']->getType()?->getSlug() === 'resource_hub_entry' ||
             $builder->getEntry()->getType()?->getSlug() === 'resource_hub_entry') {
+
+            $fieldsForContentSection = array_map(
+                function (FieldType $field) {
+                    return 'entry_' . $field->getField();
+                },
+                array_filter(
+                    $builder->getFormFields()->base()->all(),
+                    function (FieldType $field) {
+                        if (in_array($field->getField(), [
+                            'resource_banner_type',
+                            'resource_banner_theme',
+                            'resource_banner_headline',
+                            'resource_banner_lead_paragraph',
+                            'resource_banner_image',
+                            'resource_banner_media',
+                            'resource_banner_bg_greyscale',
+                            'resource_banner_bg_opacity',
+                            'resource_banner_bg_blend_mode',
+                            'resource_banner_text_class',
+                            'resource_share_position',
+                            'resource_publication_info_position',
+                            'resource_keywords',
+                            'resource_category',
+                            'resource_topics',
+                            'resource_hidden',
+                            'resource_protected',
+                        ])) {
+                            return false;
+                        }
+                        return (!$field->getEntry() instanceof PageModel);
+                    }
+                )
+            );
+
+//            dd($fieldsForContentSection);
             $builder->setSections(
                 [
                     'page' => [
                         'tabs' => [
                             'content' => [
                                 'title' => 'anomaly.module.pages::tab.content',
-                                'fields' => function (PageEntryFormBuilder $builder) {
-                                    return array_map(
-                                        function (FieldType $field) {
-                                            return 'entry_' . $field->getField();
-                                        },
-                                        array_filter(
-                                            $builder->getFormFields()->base()->all(),
-                                            function (FieldType $field) {
-                                                if (in_array($field->getField(), [
-                                                    'resource_banner_type',
-                                                    'resource_banner_theme',
-                                                    'resource_banner_headline',
-                                                    'resource_banner_lead_paragraph',
-                                                    'resource_banner_image',
-                                                    'resource_banner_media',
-                                                    'resource_banner_bg_greyscale',
-                                                    'resource_banner_bg_opacity',
-                                                    'resource_banner_bg_blend_mode',
-                                                    'resource_banner_text_class',
-                                                ])) {
-                                                    return false;
-                                                }
-                                                return (!$field->getEntry() instanceof PageModel);
-                                            }
-                                        )
-                                    );
-                                },
+                                'fields' => array_merge(['entry_resource_category', 'entry_resource_topics', 'entry_resource_keywords'], $fieldsForContentSection),
                             ],
                             'banner' => [
                                 'title' => 'conduct_lab.extension.resource_hub_page_handler::tab.banner',
@@ -93,12 +102,13 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                                     'page_slug',
                                     'page_parent',
                                     'page_enabled',
+                                    'entry_resource_publication_info_position',
                                     'page_publish_at',
                                     'page_auto_update_modified_at',
                                     'page_modified_at',
                                     'page_display_modified_at',
-                                    'resource_hidden',
-                                    'resource_protected',
+                                    'entry_resource_hidden',
+                                    'entry_resource_protected',
                                 ],
                             ],
                             'seo' => [
@@ -112,7 +122,8 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                             'share' => [
                                 'title' => 'anomaly.module.pages::tab.share',
                                 'fields' => [
-                                    'share',
+                                    'page_share',
+                                    'entry_resource_share_position',
                                     'page_open_graph_type',
                                     'page_open_graph_title',
                                     'page_open_graph_description',
