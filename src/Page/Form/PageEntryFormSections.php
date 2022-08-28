@@ -65,7 +65,16 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                         'tabs' => [
                             'content' => [
                                 'title' => 'anomaly.module.pages::tab.content',
-                                'fields' => array_merge(['entry_resource_category', 'entry_resource_topics', 'entry_resource_keywords'], $fieldsForContentSection),
+                                'fields' => array_merge(
+                                    [
+                                        'page_title',
+                                        'page_slug',
+                                        'entry_resource_category',
+                                        'entry_resource_topics',
+                                        'entry_resource_keywords'
+                                    ],
+                                    $fieldsForContentSection
+                                ),
                             ],
                             'banner' => [
                                 'title' => 'conduct_lab.extension.resource_hub_page_handler::tab.banner',
@@ -98,8 +107,6 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                             'general' => [
                                 'title' => 'anomaly.module.pages::tab.general',
                                 'fields' => [
-                                    'page_title',
-                                    'page_slug',
                                     'page_parent',
                                     'page_enabled',
                                     'entry_resource_publication_info_position',
