@@ -156,6 +156,18 @@ return [
         'warning' => '',
         'instructions' => '',
     ],
+    'resource_link' => [
+        'name' => 'Resource link',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => '',
+    ],
+    'resource_button_text' => [
+        'name' => 'Resource button text',
+        'placeholder' => 'Download',
+        'warning' => '',
+        'instructions' => '',
+    ],
     'resource_blocks' => [
         'name' => 'Blocks',
         'placeholder' => '',

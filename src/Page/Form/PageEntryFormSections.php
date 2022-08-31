@@ -24,41 +24,79 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
 //        dd($builder);
         if ($builder->getForms()['page']->getType()?->getSlug() === 'resource_hub_entry' ||
             $builder->getEntry()?->getType()?->getSlug() === 'resource_hub_entry') {
+//            foreach ($builder->getFormFields()->base()->all() as $field) {
+//                if ($field->getEntry() instanceof PageModel) {
+//                    continue;
+//                }
+//                if (in_array($field->getField(), [
+//                    'resource_banner_type',
+//                    'resource_banner_theme',
+//                    'resource_banner_headline',
+//                    'resource_banner_lead_paragraph',
+//                    'resource_banner_image',
+//                    'resource_banner_media',
+//                    'resource_banner_bg_greyscale',
+//                    'resource_banner_bg_opacity',
+//                    'resource_banner_bg_blend_mode',
+//                    'resource_banner_text_class',
+//                    'resource_share_position',
+//                    'resource_publication_info_position',
+//                    'resource_keywords',
+//                    'resource_category',
+//                    'resource_topics',
+//                    'resource_hidden',
+//                    'resource_protected',
+//                ])) {
+//                    continue;
+//                }
+//                echo "'".$field->getField()."',<br>";
+//            }
+//dd();
+//            $fieldsForContentSection = array_map(
+//                function (FieldType $field) {
+//                    return 'entry_' . $field->getField();
+//                },
+//                array_filter(
+//                    $builder->getFormFields()->base()->all(),
+//                    function (FieldType $field) {
+//                        if (in_array($field->getField(), [
+//                            'resource_banner_type',
+//                            'resource_banner_theme',
+//                            'resource_banner_headline',
+//                            'resource_banner_lead_paragraph',
+//                            'resource_banner_image',
+//                            'resource_banner_media',
+//                            'resource_banner_bg_greyscale',
+//                            'resource_banner_bg_opacity',
+//                            'resource_banner_bg_blend_mode',
+//                            'resource_banner_text_class',
+//                            'resource_share_position',
+//                            'resource_publication_info_position',
+//                            'resource_keywords',
+//                            'resource_category',
+//                            'resource_topics',
+//                            'resource_hidden',
+//                            'resource_protected',
+//                        ])) {
+//                            return false;
+//                        }
+//                        return (!$field->getEntry() instanceof PageModel);
+//                    }
+//                )
+//            );
 
-            $fieldsForContentSection = array_map(
-                function (FieldType $field) {
-                    return 'entry_' . $field->getField();
-                },
-                array_filter(
-                    $builder->getFormFields()->base()->all(),
-                    function (FieldType $field) {
-                        if (in_array($field->getField(), [
-                            'resource_banner_type',
-                            'resource_banner_theme',
-                            'resource_banner_headline',
-                            'resource_banner_lead_paragraph',
-                            'resource_banner_image',
-                            'resource_banner_media',
-                            'resource_banner_bg_greyscale',
-                            'resource_banner_bg_opacity',
-                            'resource_banner_bg_blend_mode',
-                            'resource_banner_text_class',
-                            'resource_share_position',
-                            'resource_publication_info_position',
-                            'resource_keywords',
-                            'resource_category',
-                            'resource_topics',
-                            'resource_hidden',
-                            'resource_protected',
-                        ])) {
-                            return false;
-                        }
-                        return (!$field->getEntry() instanceof PageModel);
-                    }
-                )
-            );
-
-//            dd($fieldsForContentSection);
+//            dd();
+            $fieldsForContentSection = [
+                'entry_resource_author',
+                'entry_resource_file',
+                'entry_resource_url',
+                'entry_resource_link',
+                'entry_resource_button_text',
+                'entry_resource_blocks',
+                'entry_autogenerate_related_resources',
+                'entry_autogenerate_related_resources_max',
+                'entry_related_resources',
+            ];
             $builder->setSections(
                 [
                     'page' => [

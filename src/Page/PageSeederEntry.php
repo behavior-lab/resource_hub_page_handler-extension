@@ -513,6 +513,93 @@ class PageSeederEntry extends Seeder
             );
         }
 
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_url', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_url',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_url.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.url',
+                    'config' => [],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => true,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_link', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_link',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_link.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_link.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_link.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_link.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.relationship',
+                    'config' => [
+                        'mode' => 'lookup',
+                        'related' => \Anomaly\PagesModule\Page\PageModel::class,
+                    ],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => false,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_button_text', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_button_text',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_button_text.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_button_text.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_button_text.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_button_text.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.text',
+                    'config' => [],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => true,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
         if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_banner_bg_greyscale', 'pages')) {
             $pageTypeField = $this->fields->create(
                 [
