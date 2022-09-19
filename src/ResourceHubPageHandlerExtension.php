@@ -66,9 +66,10 @@ class ResourceHubPageHandlerExtension extends PageHandlerExtension
                         $settings = app(SettingRepositoryInterface::class);
                         $defaultLocale = $settings->value('streams::default_locale');
                         $path = $page->translate($translation->locale)->slug ? $page->translate($translation->locale)->path : $page->translate($defaultLocale)->path;
+                        $localePath = $translation->locale !== $defaultLocale ? '/' . $translation->locale : '';
                         $path = Str::replaceFirst($subSiteMainPage, '', $path);
                         $route = "    // " . (new \ReflectionClass($this))->getShortName() . "
-    Route::any('{$path}', [
+    Route::any('{$localePath}{$path}', [
         'uses'                       => 'Anomaly\\PagesModule\\Http\\Controller\\PagesController@view',
         'as'                         => 'pages::{$page->getId()}.{$translation->locale}',
         'streams::addon'             => 'anomaly.module.pages',
