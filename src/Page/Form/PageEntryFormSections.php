@@ -161,6 +161,9 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                                 'fields' => [
                                     'page_meta_title',
                                     'page_meta_description',
+                                    'page_robots_no_index',
+                                    'page_robots_no_follow',
+                                    'page_hide_from_sitemap_xml',
                                     'page_structured_data',
                                 ],
                             ],
