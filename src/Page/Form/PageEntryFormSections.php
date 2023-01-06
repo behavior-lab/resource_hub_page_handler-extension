@@ -96,6 +96,8 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                 'entry_autogenerate_related_resources',
                 'entry_autogenerate_related_resources_max',
                 'entry_related_resources',
+                'entry_display_get_in_touch_in_footer',
+                'entry_display_newsletter_in_footer',
             ];
             $builder->setSections(
                 [
