@@ -96,8 +96,8 @@
                         <a id="{{$resource->entry->id}}" class="resources__list-entry link--no-hover" href="{{localizePath($resource->getPath())}}"
                            wire:key="{{$resource->entry->id}}">
                             @php
-                                $image = getImageFromEntry($resource->entry, 'resource_banner_image', ['cover' => [370, 228], 'crop' => [370, 228]]);
-                                $media = getImageFromEntry($resource->entry, 'resource_banner_media', ['cover' => [370, 228], 'crop' => [370, 228]]);
+                                $image = getImageFromEntry($resource->entry, 'resource_banner_image', ['cover' => [370, 228]]);
+                                $media = getImageFromEntry($resource->entry, 'resource_banner_media', ['cover' => [370, 228]]);
                                 $file = getFileFromEntry($resource->entry, 'resource_file');
                                 if (!$media) {
                                     $media_type = 'empty';
