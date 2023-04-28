@@ -312,4 +312,16 @@ return [
         'warning' => '',
         'instructions' => '',
     ],
+    'resource_pinned' => [
+        'name' => 'Pinned',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => '',
+    ],
+    'resource_pinned_at' => [
+        'name' => 'Pinned at',
+        'placeholder' => '',
+        'warning' => '',
+        'instructions' => '',
+    ],
 ];

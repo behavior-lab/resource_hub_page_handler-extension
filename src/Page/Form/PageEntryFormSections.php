@@ -154,6 +154,8 @@ class PageEntryFormSections extends \Anomaly\PagesModule\Page\Form\PageEntryForm
                                     'page_auto_update_modified_at',
                                     'page_modified_at',
                                     'page_display_modified_at',
+                                    'entry_resource_pinned',
+//                                    'entry_resource_pinned_at',
                                     'entry_resource_hidden',
                                     'entry_resource_protected',
                                 ],

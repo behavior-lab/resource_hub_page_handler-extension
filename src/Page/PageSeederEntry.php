@@ -935,5 +935,65 @@ class PageSeederEntry extends Seeder
                 ]
             );
         }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_pinned', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_pinned',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.boolean',
+                    "config" => [
+                        "default_value" => false,
+                    ],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => false,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
+
+        if (!$pageTypeField = $this->fields->findBySlugAndNamespace('resource_pinned_at', 'pages')) {
+            $pageTypeField = $this->fields->create(
+                [
+                    'namespace' => 'pages',
+                    'slug' => 'resource_pinned_at',
+                    'en' => [
+                        'name' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned_at.name',
+                        'placeholder' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned_at.placeholder',
+                        'warning' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned_at.warning',
+                        'instructions' => 'conduct_lab.extension.resource_hub_page_handler::field.resource_pinned_at.instructions',
+                    ],
+                    'type' => 'anomaly.field_type.datetime',
+                    'config' => [
+                        'mode' => 'datetime',
+                    ],
+                    'locked' => '1',
+                ]
+            );
+        }
+        if (!$this->assignments->findByStreamAndField($pageTypeStream, $pageTypeField)) {
+            $this->assignments->create(
+                [
+                    'translatable' => false,
+                    'required' => false,
+                    'stream' => $pageTypeStream,
+                    'field' => $pageTypeField,
+                ]
+            );
+        }
     }
 }
